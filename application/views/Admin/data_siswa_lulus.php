@@ -36,10 +36,10 @@
                                 ?>
                                     <td><?php echo $no++; ?></td>
                                     <td><?= $row['tahun_lulus']; ?></td>
-                                    <td><?= $row['bekerja']; ?> SISWA</td>
-                                    <td><?= $row['kuliah'] ?> SISWA</td>
-                                    <td><?= $row['Wirausaha'] ?> SISWA</td>
-                                    <td><?= $row['Belum_bekerja_belum_kuliah'] ?> SISWA</td>
+                                    <td><?= $row['bekerja']; ?> SISWA (<?= $row['precent_bekerja']; ?> %)</td>
+                                    <td><?= $row['kuliah'] ?> SISWA (<?= $row['percent_kuliah']; ?> %)</td>
+                                    <td><?= $row['Wirausaha'] ?> SISWA (<?= $row['percent_wirausaha']; ?> %)</td>
+                                    <td><?= $row['Belum_bekerja_belum_kuliah'] ?> SISWA (<?= $row['percent_Belum_bekerja']; ?> %)</td>
                                     <td><?= $row['total']; ?> SISWA</td>
                             </tr>
                         <?php } ?>

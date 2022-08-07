@@ -28,10 +28,11 @@ class Model_pelamar extends CI_Model
     public function dataAlumni()
     {
         $sql = "SELECT tahun_lulus,
-                COUNT(IF(status='Kuliah','Benar',null)) AS kuliah, 
-                COUNT(IF(status='Bekerja','Benar',null)) AS bekerja,
-                COUNT(IF(status='Belum bekerja/belum kuliah','Benar',null)) AS Belum_bekerja_belum_kuliah,
-                COUNT(IF(status='Wirausaha','Benar',null)) AS Wirausaha,COUNT(*) AS total
+                COUNT(IF(status='Bekerja','Benar',null)) AS bekerja,((COUNT(IF(status='Bekerja','Benar',null)))/count(*))*100 AS precent_bekerja,
+                COUNT(IF(status='Kuliah','Benar',null)) AS kuliah, ((COUNT(IF(status='Kuliah','Benar',null)))/count(*))*100 AS percent_kuliah,
+                COUNT(IF(status='Wirausaha','Benar',null)) AS Wirausaha,((COUNT(IF(status='Wirausaha','Benar',null)))/count(*))*100 AS percent_wirausaha,
+                COUNT(IF(status='Belum bekerja/belum kuliah','Benar',null)) AS Belum_bekerja_belum_kuliah,((COUNT(IF(status='Belum bekerja/belum kuliah','Benar',null)))/count(*))*100 AS percent_Belum_bekerja,
+                COUNT(*) AS total
                 FROM `siswa`
                 GROUP BY tahun_lulus
                 ORDER BY tahun_lulus DESC;";
