@@ -68,7 +68,7 @@
             </div>
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url() ?>Dashboard/kerja_sama">
+                <a class="nav-link" href="<?= base_url() ?>Dashboard/permintaan_tenaga_kerja">
                     <i class="fas fa-building"></i>
                     <span>Data Perusahaan</span></a>
             </li>

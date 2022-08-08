@@ -44,8 +44,7 @@
                                 <h6 class="font-weight-bold" style="margin-top: 20px;"><?= $row['time'] ?></h6>
                             </td>
                             <td>
-                                <h6 class="text-center"><a class="btn btn-success btn-md btn-block" href="https://api.whatsapp.com/send?phone=62<?= $row['hp'] ?>&text=Assalamu'Alaikum Selamat Pagi Siang Sore, Saya Admin Bkk, Akan Memverifikasi Data Anda Dan Saya Akan Memberikan Info Kepada Anda Jika Lowongan Yang Anda Ingin Kan Sudah Ada Panggilan
-" target="_blank">Watsapp</a></h6>
+                                <h6 class="text-center"><a class="btn btn-success btn-md btn-block" href="https://api.whatsapp.com/send?phone=62<?= $row['hp'] ?>&text=Assalamu'Alaikum Selamat Pagi Siang Sore, Saya Admin Bkk, Akan Memverifikasi Data Anda Dan Saya Akan Memberikan Info Kepada Anda Jika Lowongan Yang Anda Ingin Kan Sudah Ada Panggilan" target="_blank">Watsapp</a></h6>
                                 <h6 class="text-center"><a class="btn btn-danger btn-md btn-block" href="<?= base_url() ?>Dashboard/print/<?= $row['id_lamar'] ?>" target="_blank">Print</a></h6>
                             </td>
                     </tr>

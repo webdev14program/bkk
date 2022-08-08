@@ -16,4 +16,11 @@ class Model_perusahaan extends CI_Model
         $query = $this->db->query($sql);
         return $query->result_array();
     }
+
+    public function permintaan_tenaga_kerja()
+    {
+        $sql = "SELECT id_permintaan_tenaga_kerja,nama_perusahaan,bidang_perusahaan,tlpn_perusahaan,akl,bdp,otkp,tkj FROM `permintaan_tenaga_kerja`;";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
 }

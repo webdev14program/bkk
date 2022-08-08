@@ -216,6 +216,68 @@ class Dashboard extends CI_Controller
         }
     }
 
+    public function permintaan_tenaga_kerja()
+    {
+        $this->Model_keamanan->getKeamanan();
+        $isi['data_perusahaan'] = $this->Model_perusahaan->permintaan_tenaga_kerja();
+        $isi['content'] = 'Admin/permintaan_tenaga_kerja';
+        $this->load->view('Admin/Templates/header');
+        $this->load->view('Admin/Home', $isi);
+        $this->load->view('Admin/Templates/footer');
+    }
+
+    public function hapus_all_permintaan_tenaga_kerja()
+    {
+        $this->db->empty_table('permintaan_tenaga_kerja');
+        // $this->session->set_flashdata('info', '<div class="row">
+        // <div class="col-md mt-2">
+        //     <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        //         <strong>Data Siswa Berhasil Di Hapus</strong>
+        //         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        //             <span aria-hidden="true">&times;</span>
+        //         </button>
+        //     </div>
+
+        // </div>
+        // </div>');
+        redirect('Dashboard/permintaan_tenaga_kerja');
+    }
+
+    public function simpan_permintaan_tenaga_kerja()
+    {
+        $nama_perusahaan = $this->input->post('nama_perusahaan');
+        $alamat_perusahaan = $this->input->post('alamat_perusahaan');
+        $tlpn_perusahaan = $this->input->post('tlpn_perusahaan');
+        $bidang_perusahaan = $this->input->post('bidang_perusahaan');
+        $nama = $this->input->post('nama');
+        $jabatan = $this->input->post('jabatan');
+        $no_telpon = $this->input->post('no_telpon');
+        $email = $this->input->post('email');
+        $akl = $this->input->post('akl');
+        $bdp = $this->input->post('bdp');
+        $otkp = $this->input->post('otkp');
+        $tkj = $this->input->post('tkj');
+
+        $data = array(
+            'id_permintaan_tenaga_kerja' => rand(11111111, 99999999),
+            'nama_perusahaan' => $nama_perusahaan,
+            'alamat_perusahaan' => $alamat_perusahaan,
+            'tlpn_perusahaan' => $tlpn_perusahaan,
+            'bidang_perusahaan' => $bidang_perusahaan,
+            'nama' => $nama,
+            'jabatan' => $jabatan,
+            'no_telpon' => $no_telpon,
+            'email' => $email,
+            'akl' => $akl,
+            'bdp' => $bdp,
+            'otkp' => $otkp,
+            'tkj' => $tkj,
+        );
+
+        $this->db->insert('permintaan_tenaga_kerja', $data);
+        redirect('Dashboard/permintaan_tenaga_kerja');
+    }
+
     public function print($id_lamar)
     {
         $isi['pelamar'] = $this->Model_pelamar->detail_pelamar($id_lamar);
