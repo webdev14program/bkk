@@ -189,6 +189,13 @@ class Dashboard extends CI_Controller
                                 'email'          => $cells[5],
                                 'status'          => $cells[6],
                                 'tahun_lulus'          => $cells[7],
+                                'nama_perusahaan'          => $cells[8],
+                                'alamat_perusahaan'          => $cells[9],
+                                'tlpn_perusahaan'          => $cells[10],
+                                'bidang_perusahaan'          => $cells[11],
+                                'nama'          => $cells[12],
+                                'telpon'          => $cells[13],
+                                'jabatan'          => $cells[14],
                             );
                             array_push($save, $data);
                         }
@@ -282,6 +289,20 @@ class Dashboard extends CI_Controller
     {
         $isi['pelamar'] = $this->Model_pelamar->detail_pelamar($id_lamar);
         $this->load->view('Admin/Pelamar_loker/detail_lamar', $isi);
+    }
+
+    public function print_alumni($tahun_lulus)
+    {
+        $isi['alumni'] = $this->Model_pelamar->PrintdataAlumni($tahun_lulus);
+        $isi['header'] = $this->Model_pelamar->PrintdataAlumniHeader($tahun_lulus);
+        $this->load->view('Admin/print_alumni_pertahun', $isi);
+    }
+
+    public function print_permintaan_tenaga_kerja($tahun_lulus)
+    {
+        $isi['perusahaan'] = $this->Model_perusahaan->print_permintaan_tenaga_kerja($tahun_lulus);
+        $isi['header'] = $this->Model_pelamar->PrintdataAlumniHeader($tahun_lulus);
+        $this->load->view('Admin/print_permintaan_tenaga_kerja', $isi);
     }
     public function logout()
     {

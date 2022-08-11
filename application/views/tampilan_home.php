@@ -37,12 +37,18 @@
                     </h3>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
 
+            </div>
         </div>
     </section><!-- End About Section -->
 
+
+
     <!-- ======= Clients Section ======= -->
-    <section id="clients">
+    <section id="clients" class="bg-secodary">
         <div class="container">
             <div class="row">
                 <div class="col-md">

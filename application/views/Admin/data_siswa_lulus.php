@@ -26,6 +26,7 @@
                                 <th>Wirausaha</th>
                                 <th>Belum Bekerja/ Belum Kuliah</th>
                                 <th>Total </th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,6 +42,7 @@
                                     <td><?= $row['Wirausaha'] ?> SISWA (<?= $row['percent_wirausaha']; ?> %)</td>
                                     <td><?= $row['Belum_bekerja_belum_kuliah'] ?> SISWA (<?= $row['percent_Belum_bekerja']; ?> %)</td>
                                     <td><?= $row['total']; ?> SISWA</td>
+                                    <td><a class="btn btn-danger btn-sm" href="<?= base_url() ?>Dashboard/print_alumni/<?= $row['tahun_lulus']; ?>" target="_blank"><i class="fas fa-print"></i> Print</a></td>
                             </tr>
                         <?php } ?>
                         </tbody>

@@ -40,6 +40,23 @@ class Model_pelamar extends CI_Model
         return $query->result_array();
     }
 
+    public function PrintdataAlumniHeader($tahun_lulus)
+    {
+        $sql = "SELECT * FROM `siswa`
+WHERE tahun_lulus='$tahun_lulus';";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
+    public function PrintdataAlumni($tahun_lulus)
+    {
+        $sql = "SELECT * FROM `siswa`
+WHERE tahun_lulus='$tahun_lulus' AND (status='Bekerja' OR status='Kuliah' OR status='Wirausaha') 
+ORDER BY kompetensi_keahlian ASC;";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
     function simpanAlumni($data = array())
     {
         $jumlah = count($data);

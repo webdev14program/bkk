@@ -2,7 +2,7 @@
     <h3 class="text-center font-weight-bold">Permintaan Tenaga Kerja</h3>
 </div>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-md">
         <div class="card">
             <div class="card-body">
@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="row mb-2 mt-2">
     <div class="col-md">
@@ -24,31 +24,29 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>ID</th>
-                                <th>Nama Perusahaan</th>
-                                <th>Bidang Perusahaan</th>
-                                <th>No Telpon</th>
+                                <th>Tahun Lulus</th>
+                                <th>Jumlah Perusahaan</th>
                                 <th>Jurusan AKL</th>
                                 <th>Jurusan BDP</th>
                                 <th>Jurusan OTKP</th>
                                 <th>Jurusan TKJ</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-uppercase">
                             <tr>
                                 <?php
                                 $no = 1;
                                 foreach ($data_perusahaan as $row) {
                                 ?>
                                     <td><?php echo $no++; ?></td>
-                                    <td><?= $row['id_permintaan_tenaga_kerja']; ?></td>
-                                    <td><?= $row['nama_perusahaan']; ?></td>
-                                    <td><?= $row['bidang_perusahaan']; ?></td>
-                                    <td><?= $row['tlpn_perusahaan']; ?></td>
+                                    <td><?= $row['tahun_lulus']; ?></td>
+                                    <td><?= $row['perusahaan']; ?> Perusahaan</td>
                                     <td><?= $row['akl']; ?> SISWA</td>
                                     <td><?= $row['bdp']; ?> SISWA</td>
                                     <td><?= $row['otkp']; ?> SISWA</td>
                                     <td><?= $row['tkj']; ?> SISWA</td>
+                                    <td><a class="btn btn-danger btn-sm" href="<?= base_url() ?>Dashboard/print_permintaan_tenaga_kerja/<?= $row['tahun_lulus']; ?>" target="_blank"><i class="fas fa-print"></i> Print</a></td>
                             </tr>
                         <?php } ?>
                         </tbody>

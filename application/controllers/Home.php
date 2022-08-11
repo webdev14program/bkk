@@ -8,6 +8,7 @@ class Home extends CI_Controller
     {
         $isi['data'] = $this->Model_perusahaan->dataPerusahaan();
         $isi['lowongan'] = $this->Model_lowongan->dataLowonganlimit();
+
         $this->load->view('Template_home/header');
         $this->load->view('tampilan_home', $isi);
         $this->load->view('Template_home/footer');
