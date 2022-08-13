@@ -12,6 +12,7 @@ class Dashboard extends CI_Controller
     {
         $this->Model_keamanan->getKeamanan();
         $isi['content'] = 'Admin/tampilan_dashboard';
+        $isi['tahun'] = $this->Model_utama->tahun_aktif();
         $this->load->view('Admin/Templates/header');
         $this->load->view('Admin/Home', $isi);
         $this->load->view('Admin/Templates/footer');
