@@ -28,7 +28,6 @@
                             <h4 class="text-justify font-weight-bold"> <?= $lowongan['bagian'] ?></h4>
                             <h5 class="text-justify mt-3">Nama Perusahaan : <?= $lowongan['nama_perusahaan'] ?></h5>
                             <hr>
-                            <h5 class="text-justify">GAJI : . . .</h5>
                             <h5 class="text-justify">Lamaran ditutup pada : <?= $lowongan['tgl_akhir'] ?></h5>
                         </div>
                     </div>

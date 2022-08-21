@@ -26,15 +26,17 @@ class Model_perusahaan extends CI_Model
 
     public function permintaan_tenaga_kerja()
     {
-        $sql = "SELECT tahun_lulus,COUNT(*) AS perusahaan,
-COUNT(IF(kompetensi_keahlian='Akuntansi Keuangan dan Lembaga (AKL) 1' OR kompetensi_keahlian='Akuntansi Keuangan dan Lembaga (AKL) 2','AKL',NULL)) AS akl ,
-COUNT(IF(kompetensi_keahlian='Bisnis Daring dan Pemasaran (BDP) 1' OR kompetensi_keahlian='Bisnis Daring dan Pemasaran (BDP) 2','BDP',NULL)) AS bdp,
-COUNT(IF(kompetensi_keahlian='Otomatisasi dan Tata Kelola Perkantoran (OTKP) 1' OR kompetensi_keahlian='Otomatisasi dan Tata Kelola Perkantoran (OTKP) 2','OTKP',NULL)) AS otkp,COUNT(IF(kompetensi_keahlian='Teknik Komputer dan Jaringan (TKJ) 1' OR kompetensi_keahlian='Teknik Komputer dan Jaringan (TKJ) 2' OR kompetensi_keahlian='Teknik Komputer dan Jaringan (TKJ) 3','TKJ',NULL)) AS tkj,
-tahun_lulus
-FROM `siswa`
-WHERE status='Bekerja'
-GROUP BY tahun_lulus
-ORDER BY tahun_lulus DESC;";
+        $sql = "SELECT tahun_lulus,tahun_ajaran.tahun_ajaran,COUNT(*) AS perusahaan,
+        COUNT(IF(kompetensi_keahlian='Akuntansi Keuangan dan Lembaga (AKL) 1' OR kompetensi_keahlian='Akuntansi Keuangan dan Lembaga (AKL) 2','AKL',NULL)) AS akl ,
+        COUNT(IF(kompetensi_keahlian='Bisnis Daring dan Pemasaran (BDP) 1' OR kompetensi_keahlian='Bisnis Daring dan Pemasaran (BDP) 2','BDP',NULL)) AS bdp,
+        COUNT(IF(kompetensi_keahlian='Otomatisasi dan Tata Kelola Perkantoran (OTKP) 1' OR kompetensi_keahlian='Otomatisasi dan Tata Kelola Perkantoran (OTKP) 2','OTKP',NULL)) AS otkp,COUNT(IF(kompetensi_keahlian='Teknik Komputer dan Jaringan (TKJ) 1' OR kompetensi_keahlian='Teknik Komputer dan Jaringan (TKJ) 2' OR kompetensi_keahlian='Teknik Komputer dan Jaringan (TKJ) 3','TKJ',NULL)) AS tkj,
+        tahun_lulus
+        FROM `siswa`
+        INNER JOIN tahun_ajaran
+        ON siswa.tahun_lulus=tahun_ajaran.id_tahun_ajaran
+        WHERE siswa.status='Bekerja'
+        GROUP BY tahun_lulus
+        ORDER BY tahun_lulus DESC;";
         $query = $this->db->query($sql);
         return $query->result_array();
     }

@@ -40,7 +40,7 @@
                                 foreach ($data_perusahaan as $row) {
                                 ?>
                                     <td><?php echo $no++; ?></td>
-                                    <td><?= $row['tahun_lulus']; ?></td>
+                                    <td><?= $row['tahun_ajaran']; ?></td>
                                     <td><?= $row['perusahaan']; ?> Perusahaan</td>
                                     <td><?= $row['akl']; ?> SISWA</td>
                                     <td><?= $row['bdp']; ?> SISWA</td>

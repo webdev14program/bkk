@@ -13,6 +13,10 @@ class Dashboard extends CI_Controller
         $this->Model_keamanan->getKeamanan();
         $isi['content'] = 'Admin/tampilan_dashboard';
         $isi['tahun'] = $this->Model_utama->tahun_aktif();
+        $isi['bekerja'] = $this->Model_pelamar->homeBekerja();
+        $isi['kuliah'] = $this->Model_pelamar->homeKuliah();
+        $isi['wirausaha'] = $this->Model_pelamar->homeWirausaha();
+        $isi['belum_bekerja'] = $this->Model_pelamar->homeBelumBekerja();
         $this->load->view('Admin/Templates/header');
         $this->load->view('Admin/Home', $isi);
         $this->load->view('Admin/Templates/footer');
@@ -286,6 +290,100 @@ class Dashboard extends CI_Controller
         redirect('Dashboard/permintaan_tenaga_kerja');
     }
 
+    public function tracer_study()
+    {
+        $this->Model_keamanan->getKeamanan();
+        $isi['tracer_study'] = $this->Model_pelamar->data_tracer_study();
+        $isi['content'] = 'Admin/data_tracer_study';
+        $this->load->view('Admin/Templates/header');
+        $this->load->view('Admin/Home', $isi);
+        $this->load->view('Admin/Templates/footer');
+    }
+
+    public function hapus_all_tracer_study()
+    {
+        $this->db->empty_table('tracer_study');
+        // $this->session->set_flashdata('info', '<div class="row">
+        // <div class="col-md mt-2">
+        //     <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        //         <strong>Data Siswa Berhasil Di Hapus</strong>
+        //         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        //             <span aria-hidden="true">&times;</span>
+        //         </button>
+        //     </div>
+
+        // </div>
+        // </div>');
+        redirect('Dashboard/tracer_study');
+    }
+
+    public function  upload_tracer_study()
+    {
+        if ($this->input->post('submit', TRUE) == 'upload') {
+            $config['upload_path']      = './temp_doc/';
+            $config['allowed_types']    = 'xlsx|xls';
+            $config['file_name']        = 'doc' . time();
+
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload('excel')) {
+                $file   = $this->upload->data();
+
+                $reader = ReaderEntityFactory::createXLSXReader();
+                $reader->open('temp_doc/' . $file['file_name']);
+
+
+                foreach ($reader->getSheetIterator() as $sheet) {
+                    $numRow = 1;
+                    $save   = array();
+                    foreach ($sheet->getRowIterator() as $row) {
+
+                        if ($numRow > 1) {
+
+                            $cells = $row->getCells();
+
+                            $data = array(
+                                'id_tarcert_study' => $cells[0],
+                                'pengaku_kepentinghan' => $cells[1],
+                                'religius' => $cells[2],
+                                'jujur' => $cells[3],
+                                'tanggung_jawab' => $cells[4],
+                                'disiplin' => $cells[5],
+                                'pengetahuan' => $cells[6],
+                                'teknologi' => $cells[7],
+                                'budaya' => $cells[8],
+                                'kreatifitas' => $cells[9],
+                                'produktif' => $cells[10],
+                                'komunikasi' => $cells[11],
+                                'kolaborasi' => $cells[12],
+                                'tahun' => $cells[13]
+                            );
+                            array_push($save, $data);
+                        }
+                        $numRow++;
+                    }
+                    $this->Model_pelamar->simpanTracerStudy($save);
+                    $reader->close();
+                    unlink('temp_doc/' . $file['file_name']);
+                    $this->session->set_flashdata('info', '
+                    <div class="row">
+                    <div class="col-md mt-2">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Data Peserta Ujian Berhasil Di Tambah</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>');
+                    redirect('Dashboard/tracer_study');
+                }
+            } else {
+                echo "Error :" . $this->upload->display_errors();
+            }
+        }
+    }
+
     public function print($id_lamar)
     {
         $isi['pelamar'] = $this->Model_pelamar->detail_pelamar($id_lamar);
@@ -305,6 +403,14 @@ class Dashboard extends CI_Controller
         $isi['header'] = $this->Model_pelamar->PrintdataAlumniHeader($tahun_lulus);
         $this->load->view('Admin/print_permintaan_tenaga_kerja', $isi);
     }
+
+    public function print_tracer_study($tahun)
+    {
+        $isi['tracer_study'] = $this->Model_pelamar->print_tracer_study($tahun);
+        // $isi['header'] = $this->Model_pelamar->PrintdataAlumniHeader($tahun_lulus);
+        $this->load->view('Admin/print_tracer_study', $isi);
+    }
+
     public function logout()
     {
         $this->session->sess_destroy();

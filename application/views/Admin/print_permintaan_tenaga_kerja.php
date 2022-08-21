@@ -29,7 +29,7 @@
                         </tr>
 
                         <tr>
-                            <td class="font-weight-bold text-center text-uppercase">Tahun <?= $header['tahun_lulus'] ?></td>
+                            <td class="font-weight-bold text-center text-uppercase">Tahun <?= $header['tahun_ajaran'] ?></td>
                         </tr>
                     </tbody>
                 </table>

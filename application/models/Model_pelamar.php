@@ -27,15 +27,17 @@ class Model_pelamar extends CI_Model
 
     public function dataAlumni()
     {
-        $sql = "SELECT tahun_lulus,
-                COUNT(IF(status='Bekerja','Benar',null)) AS bekerja,((COUNT(IF(status='Bekerja','Benar',null)))/count(*))*100 AS precent_bekerja,
-                COUNT(IF(status='Kuliah','Benar',null)) AS kuliah, ((COUNT(IF(status='Kuliah','Benar',null)))/count(*))*100 AS percent_kuliah,
-                COUNT(IF(status='Wirausaha','Benar',null)) AS Wirausaha,((COUNT(IF(status='Wirausaha','Benar',null)))/count(*))*100 AS percent_wirausaha,
-                COUNT(IF(status='Belum bekerja/belum kuliah','Benar',null)) AS Belum_bekerja_belum_kuliah,((COUNT(IF(status='Belum bekerja/belum kuliah','Benar',null)))/count(*))*100 AS percent_Belum_bekerja,
-                COUNT(*) AS total
-                FROM `siswa`
-                GROUP BY tahun_lulus
-                ORDER BY tahun_lulus DESC;";
+        $sql = "SELECT siswa.tahun_lulus,tahun_ajaran.tahun_ajaran,
+        COUNT(IF(siswa.status='Bekerja','Benar',null)) AS bekerja,((COUNT(IF(siswa.status='Bekerja','Benar',null)))/count(*))*100 AS precent_bekerja,
+        COUNT(IF(siswa.status='Kuliah','Benar',null)) AS kuliah, ((COUNT(IF(siswa.status='Kuliah','Benar',null)))/count(*))*100 AS percent_kuliah,
+        COUNT(IF(siswa.status='Wirausaha','Benar',null)) AS Wirausaha,((COUNT(IF(siswa.status='Wirausaha','Benar',null)))/count(*))*100 AS percent_wirausaha,
+        COUNT(IF(siswa.status='Belum bekerja/belum kuliah','Benar',null)) AS Belum_bekerja_belum_kuliah,((COUNT(IF(siswa.status='Belum bekerja/belum kuliah','Benar',null)))/count(*))*100 AS percent_Belum_bekerja,
+        COUNT(*) AS total
+        FROM `siswa`
+        INNER JOIN tahun_ajaran
+        ON siswa.tahun_lulus=tahun_ajaran.id_tahun_ajaran
+        GROUP BY siswa.tahun_lulus
+        ORDER BY siswa.tahun_lulus DESC;";
         $query = $this->db->query($sql);
         return $query->result_array();
     }
@@ -43,7 +45,9 @@ class Model_pelamar extends CI_Model
     public function PrintdataAlumniHeader($tahun_lulus)
     {
         $sql = "SELECT * FROM `siswa`
-WHERE tahun_lulus='$tahun_lulus';";
+        INNER JOIN tahun_ajaran
+        ON siswa.tahun_lulus=tahun_ajaran.id_tahun_ajaran
+        WHERE tahun_lulus='$tahun_lulus';";
         $query = $this->db->query($sql);
         return $query->row_array();
     }
@@ -57,6 +61,46 @@ ORDER BY kompetensi_keahlian ASC;";
         return $query->result_array();
     }
 
+    public function homeBekerja()
+    {
+        $sql = "SELECT COUNT(*) AS bekerja FROM `siswa`
+        INNER JOIN tahun_ajaran
+        ON siswa.tahun_lulus=tahun_ajaran.id_tahun_ajaran
+        WHERE tahun_ajaran.status='AKTIF' AND siswa.status='Bekerja';";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
+    public function homeKuliah()
+    {
+        $sql = "SELECT COUNT(*) AS kuliah FROM `siswa`
+        INNER JOIN tahun_ajaran
+        ON siswa.tahun_lulus=tahun_ajaran.id_tahun_ajaran
+        WHERE tahun_ajaran.status='AKTIF' AND siswa.status='Kuliah';";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
+    public function homeWirausaha()
+    {
+        $sql = "SELECT COUNT(*) AS wirausaha FROM `siswa`
+        INNER JOIN tahun_ajaran
+        ON siswa.tahun_lulus=tahun_ajaran.id_tahun_ajaran
+        WHERE tahun_ajaran.status='AKTIF' AND siswa.status='Wirausaha';";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
+    public function homeBelumBekerja()
+    {
+        $sql = "SELECT COUNT(*) AS belum_bekerja FROM `siswa`
+        INNER JOIN tahun_ajaran
+        ON siswa.tahun_lulus=tahun_ajaran.id_tahun_ajaran
+        WHERE tahun_ajaran.status='AKTIF' AND siswa.status='Belum bekerja/belum kuliah';";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
     function simpanAlumni($data = array())
     {
         $jumlah = count($data);
@@ -64,5 +108,31 @@ ORDER BY kompetensi_keahlian ASC;";
         if ($jumlah > 0) {
             $this->db->insert_batch('siswa', $data);
         }
+    }
+    function simpanTracerStudy($data = array())
+    {
+        $jumlah = count($data);
+
+        if ($jumlah > 0) {
+            $this->db->insert_batch('tracer_study', $data);
+        }
+    }
+
+    public function data_tracer_study()
+    {
+        $sql = "SELECT tahun,count(*) AS jumlah_responden
+        FROM `tracer_study`
+        GROUP BY tahun
+        ORDER BY tahun DESC;";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
+    public function print_tracer_study($tahun)
+    {
+        $sql = "SELECT pengaku_kepentinghan,religius,jujur,tanggung_jawab,disiplin,pengetahuan,teknologi,budaya,kreatifitas,produktif,komunikasi,kolaborasi FROM `tracer_study` 
+        WHERE tahun='$tahun'";
+        $query = $this->db->query($sql);
+        return $query->result_array();
     }
 }

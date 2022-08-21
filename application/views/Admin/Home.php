@@ -77,6 +77,20 @@
                     <i class="fas fa-user-tie"></i>
                     <span>Data Lulusan</span></a>
             </li>
+
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Tracer Study
+            </div>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url() ?>Dashboard/tracer_study">
+                    <i class="fas fa-building"></i>
+                    <span>Data Tracert Study</span></a>
+            </li>
+
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Heading -->

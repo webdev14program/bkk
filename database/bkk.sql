@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 13, 2022 at 02:18 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.28
+-- Host: localhost
+-- Generation Time: Aug 14, 2022 at 11:14 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -172,7 +172,7 @@ CREATE TABLE `siswa` (
   `tlpn` text NOT NULL,
   `email` text NOT NULL,
   `status` text NOT NULL,
-  `tahun_lulus` int(8) NOT NULL,
+  `tahun_lulus` int(11) NOT NULL,
   `nama_perusahaan` text NOT NULL,
   `alamat_perusahaan` text NOT NULL,
   `tlpn_perusahaan` text NOT NULL,
@@ -787,8 +787,8 @@ INSERT INTO `tahun_ajaran` (`id_tahun_ajaran`, `tahun_ajaran`, `status`) VALUES
 (202, '2018', 'TIDAK AKTIF'),
 (303, '2019', 'TIDAK AKTIF'),
 (404, '2020', 'TIDAK AKTIF'),
-(505, '2021', 'TIDAK AKTIF'),
-(606, '2022', 'AKTIF');
+(505, '2021', 'AKTIF'),
+(606, '2022', 'TIDAK AKTIF');
 
 --
 -- Indexes for dumped tables

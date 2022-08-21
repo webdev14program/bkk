@@ -36,7 +36,7 @@
                                 foreach ($alumni as $row) {
                                 ?>
                                     <td><?php echo $no++; ?></td>
-                                    <td><?= $row['tahun_lulus']; ?></td>
+                                    <td><?= $row['tahun_ajaran']; ?></td>
                                     <td><?= $row['bekerja']; ?> SISWA (<?= $row['precent_bekerja']; ?> %)</td>
                                     <td><?= $row['kuliah'] ?> SISWA (<?= $row['percent_kuliah']; ?> %)</td>
                                     <td><?= $row['Wirausaha'] ?> SISWA (<?= $row['percent_wirausaha']; ?> %)</td>

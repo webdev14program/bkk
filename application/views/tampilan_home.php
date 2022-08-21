@@ -38,9 +38,48 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md">
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-header bg-success ">
+                            <h5 class="text-center text-uppercase text-white font-weight-bold">penelusuran tamatan smk tunas harapan</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered text-uppercase text-center" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Tahun Lulus</th>
+                                            <th>Bekerja</th>
+                                            <th>Kuliah</th>
+                                            <th>Wirausaha</th>
+                                            <th>Belum Bekerja/ Belum Kuliah</th>
+                                            <th>Total </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <?php
+                                            $no = 1;
+                                            foreach ($alumni as $row) {
+                                            ?>
+                                                <td><?php echo $no++; ?></td>
+                                                <td><?= $row['tahun_ajaran']; ?></td>
+                                                <td><?= $row['bekerja']; ?> SISWA </td>
+                                                <td><?= $row['kuliah'] ?> SISWA </td>
+                                                <td><?= $row['Wirausaha'] ?> SISWA </td>
+                                                <td><?= $row['Belum_bekerja_belum_kuliah'] ?> SISWA </td>
+                                                <td><?= $row['total']; ?> SISWA</td>
+                                        </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section><!-- End About Section -->
@@ -50,10 +89,14 @@
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="bg-secodary">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md">
                     <h2 class="text-center font-weight-bold mb-4" style="text-transform: uppercase;">Kerja Sama Perusahaan</h2>
                 </div>
+            </div> -->
+            <div class="section-title">
+                <h2>Bursa Kerja Khusus</h2>
+                <p>Kerja Sama Perusahaan</p>
             </div>
             <div class="row">
                 <?php foreach ($data as $row) : ?>
