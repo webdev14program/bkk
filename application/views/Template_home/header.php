@@ -44,6 +44,15 @@
                     <li><a href="<?= base_url() ?>Kegiatan" style="text-transform: uppercase;">Kegiatan</a></li>
                     <li><a href="<?= base_url() ?>Lowongan_kerja" style="text-transform: uppercase;">Lowongan Kerja</a></li>
                     <li><a href="<?= base_url() ?>Contact" style="text-transform: uppercase;">Contact</a></li>
+                    <li><a class="dropdown-toggle" style="text-transform: uppercase;" href="#" role="button" data-toggle="dropdown" aria-expanded="false">web link</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="<?= base_url() ?>Home/tamatan_alumni">Penelusuran Alumni</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?= base_url() ?>Home/tracer_study">Pemangku Kepentingan</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?= base_url() ?>pelaksanaan_pkl">Pelaksanaan PKL</a>
+                        </div>
+                    </li>
                 </ul>
             </nav><!-- .nav-menu -->
         </div>

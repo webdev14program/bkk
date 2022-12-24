@@ -27,7 +27,7 @@
             <div class="row content">
                 <div class="col-md">
                     <h5 class="text-center">
-                        <img src="<?= base_url() ?>assets/img/logo_bkk.jpeg" alt="logo">
+                        <img class="img-fluid" src="<?= base_url() ?>assets/img/logo_bkk.jpeg" alt="logo">
                     </h5>
                 </div>
                 <div class="col-md">
@@ -162,7 +162,6 @@
                 </div>
             </div>
     </section><!-- End Services Section -->
-    0
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
         <div class="container">
@@ -173,7 +172,7 @@
             </div>
             <div class="row">
                 <?php foreach ($lowongan as $row) : ?>
-                    <div class="col-md d-flex align-items-center justify-content-center br-4">
+                    <div class="col-md  mt-2 mb-2 d-flex align-items-center justify-content-center br-4">
                         <div class="card" style="width: 18rem;">
                             <h5 class="text-center"><img src="<?= base_url() ?>assets/lowongan/<?= $row['gambar'] ?>" class="card-img-top" alt="..." style="width: 170px;height: 120px;"></h5>
                             <div class="card-body">

@@ -135,4 +135,13 @@ ORDER BY kompetensi_keahlian ASC;";
         $query = $this->db->query($sql);
         return $query->result_array();
     }
+
+    public function data_kelas_jurusan()
+    {
+        $sql = "SELECT kelas_jurusan.id_kelas_jurusan,jurusan.id,jurusan.kode,jurusan.jurusan,kelas_jurusan.nama_kelas_jurusan FROM `kelas_jurusan`
+        INNER JOIN jurusan
+        ON jurusan.id=kelas_jurusan.id_jurusan;";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
 }

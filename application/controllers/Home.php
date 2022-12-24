@@ -25,8 +25,6 @@ class Home extends CI_Controller
         $this->load->view('tampilan_berhasil_tracer_study');
     }
 
-
-
     public function simpan()
     {
         date_default_timezone_set("Asia/jakarta");
@@ -64,5 +62,13 @@ class Home extends CI_Controller
 
         $this->db->insert('tracer_study', $data);
         redirect('Home/berhasil_tracer_study');
+    }
+
+    public function tamatan_alumni()
+    {
+        $isi['kelas_jurusan'] = $this->Model_pelamar->data_kelas_jurusan();
+        $this->load->view('Template_home/header');
+        $this->load->view('tampilan_tamatan_alumni', $isi);
+        $this->load->view('Template_home/footer');
     }
 }
