@@ -2,7 +2,16 @@
     <h3 class="text-center font-weight-bold">Kerja Sama Perusahaan</h3>
 </div>
 
-<a class="btn btn-primary" href="<?= base_url() ?>Dashboard/tambah_kerjasama">Tambah Perusahaan</a>
+<div class="row">
+    <div class="col-md">
+        <div class="card">
+            <div class="card-body">
+                <a class="btn btn-primary btn-sm text-uppercase font-weight-bold" href="<?= base_url() ?>Dashboard/tambah_kerjasama">Tambah Perusahaan</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="card mt-4">
     <div class="card-body">

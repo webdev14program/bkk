@@ -133,6 +133,23 @@ class Dashboard extends CI_Controller
         $this->load->view('Admin/Templates/footer');
     }
 
+    public function hapus_all_pelamar_loker()
+    {
+        $this->db->empty_table('lamar_loker');
+        $this->session->set_flashdata('pesan', '<div class="row">
+        <div class="col-md mt-2">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Data Pelamar Loker  Berhasil Di Hapus</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+        </div>
+        </div>');
+        redirect('Dashboard/pelamar_loker');
+    }
+
     public function alumni()
     {
         $this->Model_keamanan->getKeamanan();
@@ -146,17 +163,17 @@ class Dashboard extends CI_Controller
     public function hapus_all_alumni()
     {
         $this->db->empty_table('siswa');
-        // $this->session->set_flashdata('info', '<div class="row">
-        // <div class="col-md mt-2">
-        //     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        //         <strong>Data Siswa Berhasil Di Hapus</strong>
-        //         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        //             <span aria-hidden="true">&times;</span>
-        //         </button>
-        //     </div>
+        $this->session->set_flashdata('pesan', '<div class="row">
+        <div class="col-md mt-2">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Data Alumni Berhasil Di Hapus</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
 
-        // </div>
-        // </div>');
+        </div>
+        </div>');
         redirect('Dashboard/alumni');
     }
 

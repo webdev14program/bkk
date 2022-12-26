@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-
+<?= $this->session->flashdata('pesan') ?>
 <div class="row mb-2 mt-2">
     <div class="col-md">
         <div class="card">

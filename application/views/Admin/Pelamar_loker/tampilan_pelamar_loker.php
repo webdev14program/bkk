@@ -1,8 +1,19 @@
 <div class="alert alert-success" role="alert">
     <h3 class="text-center font-weight-bold">Siswa Pelamar Loker</h3>
 </div>
+<div class="row">
+    <div class="col-md">
+        <div class="card">
+            <div class="card-body">
+                <a class="btn btn-danger btn-sm text-uppercase font-weight-bold" href="<?= base_url() ?>Dashboard/hapus_all_pelamar_loker">Hapus Pelamar Loker </a>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="card mt-4">
+<?= $this->session->flashdata('pesan') ?>
+
+<div class="card mt-2">
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
