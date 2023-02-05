@@ -1,18 +1,37 @@
 <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs bg-primary">
+    <div class="jumbotron jumbotron-fluid bg-primary">
         <div class="container">
-
-            <div class="d-flex justify-content-center">
-                <h2 class="text-center text-white font-weight-bold" style="text-transform: uppercase;">Kegiatan bursa kerja khusus</h2>
-            </div>
-
+            <h1 class="display-4 text-upercase text-center text-white text-uppercase font-weight-bold">Kegiatan BKK SMK TH</h1>
         </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
     <section id="contact" class="contact">
         <div class="container">
             <div class="row  mb-4">
+                <div class="col">
+                    <div class="card bg-primary">
+                        <div class="card-body">
+                            <h4 class="text-uppercase text-white font-weight-bold">penyuluhan bahaya jajanan bernitrogen</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md mt-3">
+                    <img src="<?= base_url() ?>assets/img/kegiatan/2023/bahaya_jajanan_bernitrogen_mushola_1.png" style="max-width: 100%;height: auto;">
+                </div>
+                <div class="col-md mt-3">
+                    <img src="<?= base_url() ?>assets/img/kegiatan/2023/bahaya_jajanan_bernitrogen_mushola_2.png" style="max-width: 100%;height: 300px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md mt-3">
+                    <img src="<?= base_url() ?>assets/img/kegiatan/2023/bahaya_jajanan_bernitrogen_kelas_1.png" style="max-width: 100%;height: auto;">
+                </div>
+                <div class="col-md mt-3">
+                    <img src="<?= base_url() ?>assets/img/kegiatan/2023/bahaya_jajanan_bernitrogen_kelas_2.png" style="max-width: 100%;height: 300px;">
+                </div>
+            </div>
+            <div class="row  mb-4 mt-4">
                 <div class="col">
                     <div class="card bg-primary">
                         <div class="card-body">
@@ -39,10 +58,10 @@
             </div>
             <div class="row">
                 <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/upacara1.jpeg" style="max-width: 100%;height: auto;">
+                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/apel_prakerin_1600X900.png" style="max-width: 100%;height: auto;">
                 </div>
                 <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/upacara2.jpeg" style="max-width: 100%;height: auto;">
+                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/upacara_prakerin_1_1600x900.png" style="max-width: 100%;height: auto;">
                 </div>
             </div>
             <div class="row  mb-4 mt-3">

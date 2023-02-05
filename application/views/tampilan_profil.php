@@ -1,15 +1,11 @@
 <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs bg-primary">
+    <div class="jumbotron jumbotron-fluid bg-primary">
         <div class="container">
-
-            <div>
-                <h2 class="d-flex justify-content-center font-weight-bold" style="text-transform: uppercase;color: white;">About</h2>
-            </div>
-
+            <h1 class="display-4 text-upercase text-center text-white text-uppercase font-weight-bold">Profil BKK SMK TH</h1>
         </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
