@@ -10,6 +10,15 @@
                 <div class="col">
                     <div class="card bg-primary">
                         <div class="card-body">
+                            <h4 class="text-uppercase text-white font-weight-bold">perekaman e-ktp siswa dengan dukcapil jakarta barat</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  mb-4">
+                <div class="col">
+                    <div class="card bg-primary">
+                        <div class="card-body">
                             <h4 class="text-uppercase text-white font-weight-bold">penyuluhan bahaya jajanan bernitrogen</h4>
                         </div>
                     </div>
