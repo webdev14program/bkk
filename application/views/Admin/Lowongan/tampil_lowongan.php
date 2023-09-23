@@ -33,6 +33,11 @@
                             <td><?= $row['bagian'] ?></td>
                             <td><?= $row['tgl_dibuat'] ?></td>
                             <td><?= $row['tgl_akhir'] ?></td>
+                            <td>
+                                <h5>
+                                    <a href="#">Hapus</a>
+                                </h5>
+                            </td>
                     </tr>
                 <?php } ?>
                 </tbody>
