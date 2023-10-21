@@ -54,4 +54,12 @@ ORDER BY tahun_lulus DESC;";
         $query = $this->db->query($sql);
         return $query->result_array();
     }
+
+    public function detail_kerjasama_perusahaan($id_perusahaan)
+    {
+        $sql = "SELECT * FROM `perusahaan`
+WHERE id_perusahaan='$id_perusahaan';";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
 }

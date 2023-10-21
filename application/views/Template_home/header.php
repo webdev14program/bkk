@@ -10,8 +10,8 @@
     <meta content="BKK SMK TH" name="keywords">
 
     <!-- Favicons -->
-    <link href="<?= base_url() ?>assets/img/logo_bkk.jpeg" rel="icon">
-    <link href="<?= base_url() ?>assets/sailor/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="<?= base_url() ?>assets/img/bkk_terbaru.png" rel="icon">
+
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">

@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <label>Logo Perusahaan</label>
-                        <input type="file" name="gambar" class="form-control-file">
+                        <input type="text" name="gambar" class="form-control-file">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

@@ -12,8 +12,22 @@
         <div class="container">
 
             <div class="row content">
-                <div class="col-md>
-                    <h5 class=" text-center"><img class="img-fluid" src="<?= base_url() ?>assets/img/logo_bkk.jpeg"></h5>
+                <!-- <div class="col-md>
+                    <h5 class="text-center">
+                        <img class="img-fluid" src="<?= base_url() ?>assets/img/bkk_terbaru.png" alt="logo_bkk">
+                    </h5>
+                </div>
+                <div class="col-md">
+                    <h2 class="text-center text-primary">Bursa Kerja Khusus <br>SMK Tunas Harapan Jakarta Barat</h2>
+                    <h3 class="text-justify">
+                        Bursa Kerja Khusus SMK Tunas Harapan Jakarta Barat sebagai salah satu Lembaga Pendidikan formal yang menyelenggarakan jenjang Pendidikan menengah kejuruan (SMK) yang bertujuan menyiapkan tenaga kerja tingkat mengegah.salah satunya yang menjadi tuntutan bagi SMK saat ini adalah bagaimana agar bisa mencitrakan diri sebagai sekolah yang mampu mencetak siswanya menjadi tenaga kerja yank produktif dan professional.
+                    </h3>
+                </div> -->
+
+                <div class="col-md">
+                    <h5 class="text-center">
+                        <img class="img-fluid" src="<?= base_url() ?>assets/img/bkk_terbaru.png" alt="logo_bkk">
+                    </h5>
                 </div>
                 <div class="col-md">
                     <h2 class="text-center text-primary">Bursa Kerja Khusus <br>SMK Tunas Harapan Jakarta Barat</h2>
