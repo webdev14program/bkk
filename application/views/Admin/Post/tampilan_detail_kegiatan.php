@@ -27,7 +27,7 @@
             </div>
             <div class="card-body">
                 <h5 class="text-center">
-                    <img src="<?= $kegiatan['gambar'] ?>" alt="<?= $kegiatan['nama_kegiatan'] ?>" style="width: 450px;height: 400px;">
+                    <img src="<?= $kegiatan['gambar'] ?>" alt="<?= $kegiatan['nama_kegiatan'] ?>" style="width: 500px;height: 400px;">
                 </h5>
             </div>
         </div>
