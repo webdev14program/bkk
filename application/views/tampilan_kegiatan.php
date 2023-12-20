@@ -6,158 +6,25 @@
     </div>
     <section id="contact" class="contact">
         <div class="container">
-            <div class="row  mb-4">
-                <div class="col">
-                    <div class="card bg-primary">
-                        <div class="card-body">
-                            <h4 class="text-uppercase text-white font-weight-bold">perekaman e-ktp siswa dengan dukcapil jakarta barat</h4>
+            <div class="row">
+                <?php foreach ($kegiatan as $row) : ?>
+                    <div class="col-md mt-2 d-flex align-items-center justify-content-center mb-4">
+                        <div class="card" style="width: 21rem;">
+                            <div class="card-body">
+                                <h5 class="text-uppercase text-center mb-3"><?= $row['nama_kegiatan'] ?> </h5>
+                                <h5 class="text-center mt-2"><img src="<?= $row['gambar'] ?>" class="card-img-top" style="width: 285px;height: 235px;"></h5>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <h5 class="text-center">
+                                    <a class="btn btn-primary btn-sm text-uppercase font-weight-bold" href="<?= base_url() ?>Kegiatan/detail_kegiatan/<?= $row['id_kegiatan'] ?>">Detail</a>
+                                </h5>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
-            <div class="row  mb-4">
-                <div class="col">
-                    <div class="card bg-primary">
-                        <div class="card-body">
-                            <h4 class="text-uppercase text-white font-weight-bold">penyuluhan bahaya jajanan bernitrogen</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2023/bahaya_jajanan_bernitrogen_mushola_1.png" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2023/bahaya_jajanan_bernitrogen_mushola_2.png" style="max-width: 100%;height: 300px;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2023/bahaya_jajanan_bernitrogen_kelas_1.png" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2023/bahaya_jajanan_bernitrogen_kelas_2.png" style="max-width: 100%;height: 300px;">
-                </div>
-            </div>
-            <div class="row  mb-4 mt-4">
-                <div class="col">
-                    <div class="card bg-primary">
-                        <div class="card-body">
-                            <h4 class="text-uppercase text-white font-weight-bold">Pembekalan Prakerin SMK TUNAS HARAPAN 2022 - 2023</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/sambutan_kepala_sekolah_1600x900.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/sambutan_ketua_bkk.jpeg" style="max-width: 100%;height: 300px;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/pembekalan_narasumber_1600x900.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/kegiatan_peserta_didik.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/apel_prakerin_1600X900.png" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2022/upacara_prakerin_1_1600x900.png" style="max-width: 100%;height: auto;">
-                </div>
-            </div>
-            <div class="row  mb-4 mt-3">
-                <div class="col">
-                    <div class="card bg-primary">
-                        <div class="card-body">
-                            <h4 class="text-uppercase text-white font-weight-bold">Interview calon Karyawan</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-3.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-4.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-5.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-7.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col">
-                    <div class="card bg-primary">
-                        <div class="card-body">
-                            <h4 class="text-uppercase text-white font-weight-bold">Pengarahan Calon Karyawan bkk tunas harapan</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-2.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-6.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-8.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-9.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-            </div>
-
-            <div class="row mt-3">
-                <div class="col">
-                    <div class="card bg-primary">
-                        <div class="card-body">
-                            <h4 class="text-uppercase text-white font-weight-bold">Pendaftaran calon karyawan bkk smk tunas harapan</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-10.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2021/2021-12.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-            </div>
-            <!-- <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2020/2020-1.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2020/2020-2.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md mt-3">
-                    <img src="<?= base_url() ?>assets/img/kegiatan/2020/2020-3.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-                <div class="col-md mt-3">
-                    <img src=" <?= base_url() ?>assets/img/kegiatan/2020/2020-4.jpeg" style="max-width: 100%;height: auto;">
-                </div>
-            </div> -->
         </div>
+
     </section><!-- End Contact Section -->
 
     <!-- ======= Contact Section ======= -->

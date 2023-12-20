@@ -1,15 +1,10 @@
 <main id="main">
-
     <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs bg-primary">
+    <div class="jumbotron jumbotron-fluid bg-primary">
         <div class="container">
-
-            <div class="d-flex justify-content-center">
-                <h2 class="text-center text-white font-weight-bold" style="text-transform: uppercase;">Contact</h2>
-            </div>
-
+            <h1 class="display-4 text-upercase text-center text-white text-uppercase font-weight-bold">CONTACT</h1>
         </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -22,7 +17,7 @@
             <div class="row mt-5">
 
                 <div class="col-md">
-                    <h5 class=" text-center"><img class="img-fluid" src="<?= base_url() ?>assets/img/logo_bkk.jpeg" style="margin-top: -50px; width: 300px;height300px;"></h5>
+                    <h5 class=" text-center"><img class="img-fluid" src="<?= base_url() ?>assets/img/bkk_terbaru.png" style="margin-top: -50px; width: 280px;height: 280px;"></h5>
                 </div>
                 <div class=" col-md">
                     <div class="info">

@@ -1,15 +1,10 @@
 <main id="main">
-
     <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs bg-primary">
+    <div class="jumbotron jumbotron-fluid bg-primary">
         <div class="container">
-
-            <div class="d-flex justify-content-center">
-                <h2 class="text-center text-white font-weight-bold" style="text-transform: uppercase;">Lowongan Kerja</h2>
-            </div>
-
+            <h1 class="display-4 text-upercase text-center text-white text-uppercase font-weight-bold">LOWONGAN KERJA</h1>
         </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
