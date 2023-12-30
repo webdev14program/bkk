@@ -14,7 +14,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="text-center">
-                                <img src="<?= $kegiatan['gambar'] ?>" alt="<?= $kegiatan['nama_kegiatan'] ?>" style="width: 350px;height: 250px;">
+                                <img src="<?= $kegiatan['gambar'] ?>" alt="<?= $kegiatan['nama_kegiatan'] ?>" style="width: 300px;height: 200px;">
                             </h5>
                             <div class="card">
                                 <div class="card-header bg-primary text-white">
@@ -25,7 +25,7 @@
                                         <?php foreach ($gambar as $row) : ?>
                                             <div class="col-md mt-2 d-flex align-items-center justify-content-center mb-4">
 
-                                                <h5 class="text-center mt-2"><img src="<?= $row['gambar'] ?>" class="card-img-top" style="width: 300px;height: 250px;"></h5>
+                                                <h5 class="text-center mt-2"><img src="<?= $row['gambar'] ?>" class="card-img-top" style="width: 250px;height: 200px;"></h5>
 
                                             </div>
                                         <?php endforeach; ?>
