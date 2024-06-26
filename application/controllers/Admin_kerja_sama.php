@@ -32,11 +32,11 @@ class Admin_kerja_sama extends CI_Controller
 
 		$data = array(
 			'nama' =>  $nama,
-			'gambar' => "http://drive.google.com/uc?export=view&id=" . $gambar,
+			'gambar' => $gambar,
 		);
 
 		$this->db->insert('perusahaan', $data);
-		redirect('Dashboard/kerja_sama');
+		redirect('Admin_kerja_sama');
 	}
 
 	public function detail_perusahaan($id_perusahaan)

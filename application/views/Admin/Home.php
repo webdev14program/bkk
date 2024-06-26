@@ -29,7 +29,7 @@
 				Master
 			</div>
 			<li class="nav-item">
-				<a class="nav-link" href="<?= base_url() ?>Admin_kerja_sama">
+				<a class="nav-link" href="<?= base_url() ?>Dashboard/kerja_sama_perusahaan">
 					<i class="fas fa-building"></i>
 					<span>Kerja Sama Perusahaan</span></a>
 			</li>

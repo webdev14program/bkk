@@ -22,6 +22,107 @@ class Dashboard extends CI_Controller
 		$this->load->view('Admin/Templates/footer');
 	}
 
+	public function kerja_sama_perusahaan()
+	{
+		$this->Model_keamanan->getKeamanan();
+		$isi['perusahaan'] = $this->Model_perusahaan->dataPerusahaan();
+		$isi['content'] = 'Admin/Kerja_sama/kerja_sama';
+		$this->load->view('Admin/Templates/header');
+		$this->load->view('Admin/Home', $isi);
+		$this->load->view('Admin/Templates/footer');
+	}
+	public function tambah_kerjasama()
+	{
+
+		$this->Model_keamanan->getKeamanan();
+		$isi['content'] = 'Admin/Kerja_sama/tambah_kerja_sama';
+		$this->load->view('Admin/Templates/header');
+		$this->load->view('Admin/Home', $isi);
+		$this->load->view('Admin/Templates/footer');
+	}
+
+	public function upload_perusahaan()
+	{
+		$this->Model_keamanan->getKeamanan();
+		$nama = $this->input->post('perusahaan');
+		$gambar = $this->input->post('gambar');
+
+
+		$data = array(
+			'nama' =>  $nama,
+			'gambar' => $gambar,
+		);
+
+		$this->db->insert('perusahaan', $data);
+		redirect('Dashboard/kerja_sama_perusahaan');
+	}
+
+	public function upload_mou_perusahaan()
+	{
+		if ($this->input->post('submit', TRUE) == 'upload') {
+			$config['upload_path']      = './temp_doc/';
+			$config['allowed_types']    = 'xlsx|xls';
+			$config['file_name']        = 'doc' . time();
+
+			$this->load->library('upload', $config);
+
+			if ($this->upload->do_upload('excel')) {
+				$file   = $this->upload->data();
+
+				$reader = ReaderEntityFactory::createXLSXReader();
+				$reader->open('temp_doc/' . $file['file_name']);
+
+
+				foreach ($reader->getSheetIterator() as $sheet) {
+					$numRow = 1;
+					$save   = array();
+					foreach ($sheet->getRowIterator() as $row) {
+
+						if ($numRow > 1) {
+
+							$cells = $row->getCells();
+
+							$data = array(
+								'id_perusahaan'              => $cells[0],
+								'nama'      => $cells[1],
+								'profil'        => $cells[2],
+								'gambar'          => $cells[3],
+							);
+							array_push($save, $data);
+						}
+						$numRow++;
+					}
+					$this->Model_perusahaan->simpan($save);
+					$reader->close();
+					unlink('temp_doc/' . $file['file_name']);
+					$this->session->set_flashdata('info', '
+                    <div class="row">
+                    <div class="col-md mt-2">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Data Peserta Ujian Berhasil Di Tambah</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>');
+					redirect('Dashboard/kerja_sama_perusahaan');
+				}
+			} else {
+				echo "Error :" . $this->upload->display_errors();
+			}
+		}
+	}
+
+	public function detail_perusahaan($id_perusahaan)
+	{
+		$isi['kerja_sama'] = $this->Model_perusahaan->detail_kerjasama_perusahaan($id_perusahaan);
+		$isi['content'] = 'Admin/Kerja_sama/detail_kerja_sama';
+		$this->load->view('Admin/Templates/header');
+		$this->load->view('Admin/Home', $isi);
+		$this->load->view('Admin/Templates/footer');
+	}
+
 	public function lowongan()
 	{
 		$this->Model_keamanan->getKeamanan();

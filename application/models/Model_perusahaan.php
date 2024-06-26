@@ -62,4 +62,13 @@ WHERE id_perusahaan='$id_perusahaan';";
         $query = $this->db->query($sql);
         return $query->row_array();
     }
+
+    function simpan($data = array())
+    {
+        $jumlah = count($data);
+
+        if ($jumlah > 0) {
+            $this->db->insert_batch('perusahaan', $data);
+        }
+    }
 }
