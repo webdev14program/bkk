@@ -142,6 +142,13 @@ class Dashboard extends CI_Controller
 		$this->load->view('Admin/Templates/footer');
 	}
 
+	public function hapus__id_lowongan($id_lowongan)
+	{
+		$this->db->where('id_lowongan', $id_lowongan);
+		$this->db->delete('lowongan');
+		redirect('Dashboard/lowongan');
+	}
+
 	public function upload_lowongan()
 	{
 		$this->Model_keamanan->getKeamanan();
