@@ -12,6 +12,7 @@
                 <button type="button" class="btn btn-success btn-sm text-uppercase font-weight-bold" data-toggle="modal" data-target="#uploadkerjasama">
                     upload kerja sama
                 </button>
+                <a class="btn btn-danger btn-sm text-uppercase font-weight-bolder" href="<?= base_url() ?>Dashboard/hapus_all_mou_kerjasama">Hapus All kerja sama</a>
             </div>
         </div>
     </div>

@@ -57,6 +57,12 @@ class Dashboard extends CI_Controller
 		redirect('Dashboard/kerja_sama_perusahaan');
 	}
 
+	public function hapus_all_mou_kerjasama()
+	{
+		$this->db->empty_table('perusahaan');
+		redirect('Dashboard/kerja_sama_perusahaan');
+	}
+
 	public function upload_mou_perusahaan()
 	{
 		if ($this->input->post('submit', TRUE) == 'upload') {
