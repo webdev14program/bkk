@@ -28,7 +28,7 @@
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
-            <div class="col-md-5">
+            <div class="col-md-7">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
@@ -37,8 +37,8 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <img src="<?= base_url() ?>assets/img/bkk_terbaru.png" alt="bkk" style="weight:100px;height: 100px;"><br>
-                                        <h1 class="h4 text-gray-900 mb-4">Administrator <br>Bursa Kerja Khusus</h1>
+                                        <img src="<?= base_url() ?>assets/img/bkk_terbaru.png" alt="bkk" style="width: 150px; height: 150px;"> <br>
+                                        <h1 class="h4 text-gray-900 mb-4 text-uppercase font-weight-bold">Administrator <br>Bursa Kerja Khusus</h1>
                                         <?= $this->session->flashdata('pesan'); ?>
                                     </div>
                                     <form method="POST" action="<?= base_url() ?>Admin/proses_login" class="user">

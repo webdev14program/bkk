@@ -164,17 +164,7 @@ class Dashboard extends CI_Controller
 		$gaji = $this->input->post('gaji');
 		$tgl_awal = $this->input->post('tgl_dibuat');
 		$tgl_akhir = $this->input->post('tgl_akhir');
-		$gambar = $_FILES['gambar']['name'];
-		$config['upload_path']          = './assets/lowongan';
-		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['overwrite']            = true;
-		$config['max_size']             = 2048;
-		$this->load->library('upload', $config);
-
-		if ($this->upload->do_upload('gambar')) {
-			$gambar = $this->upload->data("file_name");
-			// redirect('Admin/data_testimoni');
-		}
+		$gambar = $this->input->post('gambar');
 
 		$data = array(
 			'nama_perusahaan' =>  $nama,

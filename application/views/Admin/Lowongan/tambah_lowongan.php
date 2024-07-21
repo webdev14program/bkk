@@ -29,12 +29,6 @@
                     <div class="row">
                         <div class="col-md">
                             <div class="form-group">
-                                <label>Gaji</label>
-                                <input type="number" class="form-control" name="gaji">
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <div class="form-group">
                                 <label>Tanggal dibuat</label>
                                 <input type="text" class="form-control datepicker" name="tgl_dibuat">
                             </div>
@@ -48,7 +42,7 @@
                     </div>
                     <div class="form-group">
                         <label>Logo Perusahaan</label>
-                        <input type="file" class="form-control-file" name="gambar">
+                        <input type="text" class="form-control-file" name="gambar">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

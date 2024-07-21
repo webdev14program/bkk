@@ -1,15 +1,10 @@
 <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs bg-primary">
+    <div class="jumbotron jumbotron-fluid bg-primary">
         <div class="container">
-
-            <div class="d-flex justify-content-center">
-                <h2 class="text-center text-white font-weight-bold" style="text-transform: uppercase;">Lowongan Kerja </h2>
-            </div>
-
+            <h1 class="display-4 text-upercase text-center text-white text-uppercase font-weight-bold">LOWONGAN KERJA</h1>
         </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -18,7 +13,7 @@
                 <div class="col-md-3 mt-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="text-center"><img src="<?= base_url() ?>assets/lowongan/<?= $lowongan['gambar'] ?>" style="width: 160px;height: 160px;"></h5>
+                            <h5 class="text-center"><img src="<?= $lowongan['gambar'] ?>" style="width: 160px;height: 160px;"></h5>
                         </div>
                     </div>
                 </div>

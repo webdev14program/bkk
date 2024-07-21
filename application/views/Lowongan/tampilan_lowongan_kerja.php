@@ -16,7 +16,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <h5 class="text-center"><img src="<?= base_url() ?>assets/lowongan/<?= $row['gambar'] ?>" style="width: 150px;height: 150px;"></h5>
+                                        <h5 class="text-center"><img src="<?= $row['gambar'] ?>" style="width: 150px;height: 150px;"></h5>
                                     </div>
                                     <div class="col-md-9">
                                         <h5 class="text-justify"><?= $row['bagian'] ?></h5>
