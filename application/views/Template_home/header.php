@@ -42,7 +42,7 @@
                     <li><a href="<?= base_url() ?>" style="text-transform: uppercase;">Home</a></li>
                     <li><a href="<?= base_url() ?>Profil" style="text-transform: uppercase;">Profil</a></li>
                     <li><a href="<?= base_url() ?>Kegiatan" style="text-transform: uppercase;">Kegiatan</a></li>
-                    <li><a href="<?= base_url() ?>Lowongan_kerja" style="text-transform: uppercase;">Lowongan Kerja</a></li>
+                    <!-- <li><a href="<?= base_url() ?>Lowongan_kerja" style="text-transform: uppercase;">Lowongan Kerja</a></li> -->
                     <li><a href="<?= base_url() ?>Contact" style="text-transform: uppercase;">Contact</a></li>
                     <li><a class="dropdown-toggle" style="text-transform: uppercase;" href="#" role="button" data-toggle="dropdown" aria-expanded="false">web link</a>
                         <div class="dropdown-menu">

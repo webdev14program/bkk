@@ -53,14 +53,16 @@ class Model_pelamar extends CI_Model
 FROM `siswa`
         INNER JOIN tahun_ajaran
         ON siswa.tahun_lulus=tahun_ajaran.id_tahun_ajaran
-        WHERE tahun_lulus='606';";
+        WHERE tahun_lulus='$tahun_lulus';";
 		$query = $this->db->query($sql);
 		return $query->row_array();
 	}
 
 	public function PrintdataAlumni($tahun_lulus)
 	{
-		$sql = "SELECT siswa.id,siswa.nama_siswa,siswa.kompetensi_keahlian,siswa.status FROM `siswa`
+		$sql = "SELECT siswa.id,siswa.nama_siswa,jurusan.jurusan,siswa.status FROM `siswa`
+INNER JOIN jurusan
+ON siswa.kd_jurusan=jurusan.kode
 WHERE tahun_lulus='$tahun_lulus' AND (status='Bekerja' OR status='Kuliah' OR status='Wirausaha') 
 ORDER BY siswa.id ASC;";
 		$query = $this->db->query($sql);

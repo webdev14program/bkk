@@ -10,6 +10,12 @@ class Model_perusahaan extends CI_Model
         return $query->row()->siswa;
     }
 
+    public function jumlah_mou(){
+        $sql = "SELECT COUNT(*) AS jumlah_data_mou FROM `perusahaan`;";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
     public function dataPerusahaan()
     {
         $sql = "SELECT * FROM `perusahaan`";

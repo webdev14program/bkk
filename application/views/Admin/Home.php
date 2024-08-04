@@ -33,7 +33,7 @@
 					<i class="fas fa-building"></i>
 					<span>Kerja Sama Perusahaan</span></a>
 			</li>
-			<li class="nav-item" style="margin-top: -20px;">
+			<!-- <li class="nav-item" style="margin-top: -20px;">
 				<a class="nav-link" href="<?= base_url() ?>Dashboard/lowongan">
 					<i class="fas fa-align-justify"></i>
 					<span>Lowongan Pekerjaan</span></a>
@@ -42,52 +42,50 @@
 				<a class="nav-link" href="<?= base_url() ?>Dashboard/pelamar_loker">
 					<i class="fas fa-user-friends"></i>
 					<span>Siswa Pelamar Loker</span></a>
-			</li>
+			</li> -->
 			<hr class="sidebar-divider">
 			<div class="sidebar-heading">
-				Master Post
+				Post kegiatan
 			</div>
 			<!-- Nav Item - Tables -->
 			<li class="nav-item">
-				<a class="nav-link" href="<?= base_url() ?>Admin_post">
+				<a class="nav-link" href="<?= base_url() ?>Dashboard/post_kegiatan">
 					<i class="fas fa-vote-yea"></i>
 					<span>Data Post</span></a>
 			</li>
 			<hr class="sidebar-divider">
 			<!-- Heading -->
 			<div class="sidebar-heading">
-				Permintaan Tenaga Kerja
+				Data Lulusan
 			</div>
 			<!-- Nav Item - Tables -->
-			<li class="nav-item">
+			<!-- <li class="nav-item">
 				<a class="nav-link" href="<?= base_url() ?>Dashboard/permintaan_tenaga_kerja">
 					<i class="fas fa-building"></i>
 					<span>Data Perusahaan</span></a>
-			</li>
-			<li class="nav-item" style="margin-top: -20px;">
+			</li> -->
+			<li class="nav-item">
 				<a class="nav-link" href="<?= base_url() ?>Dashboard/alumni">
 					<i class="fas fa-user-tie"></i>
 					<span>Data Lulusan</span></a>
 			</li>
 
 			<hr class="sidebar-divider">
-			<!-- Heading -->
-			<div class="sidebar-heading">
+
+			<!-- <div class="sidebar-heading">
 				Tracer Study
 			</div>
-			<!-- Nav Item - Tables -->
 			<li class="nav-item">
 				<a class="nav-link" href="<?= base_url() ?>Dashboard/tracer_study">
 					<i class="fas fa-building"></i>
 					<span>Data Tracert Study</span></a>
-			</li>
+			</li> -->
 
 
-			<!-- Divider -->
-			<hr class="sidebar-divider">
+
 			<!-- Heading -->
 			<div class="sidebar-heading">
-				Setting
+				Logout
 			</div>
 			<!-- Nav Item - Tables -->
 			<li class="nav-item">
@@ -153,7 +151,7 @@
 				<div class="container my-auto">
 					<div class="copyright text-center text-white my-auto">
 						<h5 class="text-center font-weight-bold">Copyright &copy; Bursa Kerja Khusus SMK Tunas Harapan</h5>
-						<h6 class="text-center font-weight-bold">Designed by Rahmadika S Setiawan, S.Kom</h6>
+						<!-- <h6 class="text-center font-weight-bold">Designed by Rahmadika S Setiawan, S.Kom</h6> -->
 					</div>
 				</div>
 			</footer>

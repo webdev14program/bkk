@@ -29,7 +29,7 @@
                 </div>
                 <div class="card-footer text-muted">
                     <h5 class="text-center">
-                        <a class="btn btn-primary btn-sm text-uppercase font-weight-bold" href="<?= base_url() ?>Admin_post/detail_kegiatan/<?= $row['id_kegiatan'] ?>">Detail</a>
+                        <a class="btn btn-primary btn-sm text-uppercase font-weight-bold" href="<?= base_url() ?>Dashboard/detail_kegiatan/<?= $row['id_kegiatan'] ?>">Detail</a>
                     </h5>
                 </div>
             </div>
@@ -46,7 +46,7 @@
 
             </div>
             <div class="modal-body">
-                <form method="POST" action="<?= base_url() ?>Admin_post/upload_kegiatan" enctype="multipart/form-data">
+                <form method="POST" action="<?= base_url() ?>Dashboard/upload_kegiatan" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>Nama Kegiatan</label>
                         <input type="text" name="nama_kegiatan" class="form-control">

@@ -14,7 +14,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="text-center">
-                                <img src="<?= $kegiatan['gambar'] ?>" alt="<?= $kegiatan['nama_kegiatan'] ?>" style="width: 300px;height: 200px;">
+                                <img class="img-fluid" src="<?= $kegiatan['gambar'] ?>" alt="<?= $kegiatan['nama_kegiatan'] ?>" style="width: 400px;height: 300px;">
                             </h5>
                             <div class="card">
                                 <div class="card-header bg-primary text-white">

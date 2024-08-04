@@ -10,14 +10,14 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 	<title>Bursa Kerja Khusus | Administrator</title>
-	<link rel="icon" href="<?= base_url() ?>assets/img/logo_bkk.jpeg">
+	<link rel="icon" href="<?= base_url() ?>assets/img/bkk_terbaru.png">
 </head>
 
 <body>
 
 	<div class="container">
 		<div class="row" style="margin-top: 50px;">
-			<img src="<?= base_url() ?>assets/img/logo_bkk.jpeg" style="width: 180px;height: 160px;margin-top: 20px;">
+			<img src="<?= base_url() ?>assets/img/bkk_terbaru.png" style="width: 180px;height: 160px;margin-top: 20px;">
 			<div class="col-md mt-4">
 				<table class="table border">
 					<tbody>
@@ -98,7 +98,7 @@
 					?>
 						<td><?php echo $no++; ?></td>
 						<td><?= $row['nama_siswa']; ?></td>
-						<td><?= $row['kompetensi_keahlian']; ?></td>
+						<td><?= $row['jurusan']; ?></td>
 						<td><?= $row['status']; ?></td>
 				</tr>
 			<?php } ?>
@@ -130,7 +130,7 @@
 									?>
                                         <td><?php echo $no++; ?></td>
                                         <td><?= $row['nama_siswa']; ?></td>
-                                        <td><?= $row['kompetensi_keahlian']; ?></td>
+                                        <td><?= $row['jurusan']; ?></td>
                                         <td><?= $row['status']; ?></td>
                                         <td><?= $row['tahun_lulus']; ?></td>
                                 </tr>

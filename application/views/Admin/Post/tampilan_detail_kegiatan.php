@@ -10,7 +10,7 @@
     <div class="col-md">
         <div class="card">
             <div class="card-body">
-                <a class="btn btn-danger btn-sm text-uppercase font-weight-bold" href="<?= base_url() ?>Admin_post">Kembali</a>
+                <a class="btn btn-danger btn-sm text-uppercase font-weight-bold" href="<?= base_url() ?>Dashboard/post_kegiatan">Kembali</a>
                 <button type="button" class="btn btn-primary btn-sm text-uppercase font-weight-bold" data-toggle="modal" data-target="#exampleModal">
                     Upload Gambar
                 </button>
@@ -63,7 +63,7 @@
                 <h5 class="modal-title text-uppercase font-weight-bold" id="exampleModalLabel">Upload Gambar</h5>
             </div>
             <div class="modal-body">
-                <?= form_open_multipart('Admin_post/upload_gambar_kegiatan'); ?>
+                <?= form_open_multipart('Dashboard/upload_gambar_kegiatan'); ?>
 
                 <div class="form-group">
                     <input type="file" class="form-control-file" name="excel">

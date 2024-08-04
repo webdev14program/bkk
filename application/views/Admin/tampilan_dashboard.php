@@ -2,49 +2,86 @@
     <div class="col-md">
         <div class="card bg-primary">
             <div class="card-body">
-                <h5 class="text-white text-uppercase font-weight-bold"><i class="fas fa-fw fa-tachometer-alt"></i> ADMINISTRATOR BURSA KERJA KHUSUS ( TAHUN LULUS <?= $tahun['tahun_ajaran'] ?>)</h5>
+                <h5 class="text-white text-uppercase font-weight-bold text-center"></i> BKK SMK TUNAS HARAPAN JAKARTA BARAT ( TAHUN LULUS <?= $tahun['tahun_ajaran'] ?>)</h5>
             </div>
         </div>
     </div>
 </div>
 
+<div class="row mt-2">
+    <div class="col-md mt-2">
+        <div class="card">
+            <div class="card-body bg-primary text-white">
+                <h6 class="text-uppercase font-weight-bolder text-center text-uppercase">bekerja melanjutkan wirausaha (bmw)</h6>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row">
-
     <div class="col-md mt-2">
         <div class="card bg-success">
             <div class="card-body">
-                <h4 class="text-white font-weight-bold text-uppercase">bekerja</h4>
-                <h4 class="text-white font-weight-bold text-uppercase"><?= $bekerja['bekerja'] ?> siswa</h4>
+                <h5 class="text-white font-weight-bold text-uppercase">bekerja</h5>
+                <h5 class="text-white font-weight-bold text-uppercase"><?= $bekerja['bekerja'] ?> siswa</h5>
             </div>
         </div>
     </div>
     <div class="col-md mt-2">
         <div class="card bg-warning">
             <div class="card-body">
-                <h4 class="text-white font-weight-bold text-uppercase">kuliah</h4>
-                <h4 class="text-white font-weight-bold text-uppercase"><?= $kuliah['kuliah'] ?> siswa</h4>
+                <h5 class="text-white font-weight-bold text-uppercase">kuliah</h5>
+                <h5 class="text-white font-weight-bold text-uppercase"><?= $kuliah['kuliah'] ?> siswa</h5>
             </div>
         </div>
     </div>
     <div class="col-md mt-2">
         <div class="card bg-danger">
             <div class="card-body">
-                <h4 class="text-white font-weight-bold text-uppercase">wirausaha</h4>
-                <h4 class="text-white font-weight-bold text-uppercase"><?= $wirausaha['wirausaha'] ?> siswa</h4>
+                <h5 class="text-white font-weight-bold text-uppercase">wirausaha</h5>
+                <h5 class="text-white font-weight-bold text-uppercase"><?= $wirausaha['wirausaha'] ?> siswa</h5>
             </div>
         </div>
     </div>
     <div class="col-md mt-2">
         <div class="card bg-dark">
             <div class="card-body">
-                <h4 class="text-white font-weight-bold text-uppercase">belum bekerja</h4>
-                <h4 class="text-white font-weight-bold text-uppercase"><?= $belum_bekerja['belum_bekerja'] ?> siswa</h4>
+                <h5 class="text-white font-weight-bold text-uppercase">belum bekerja</h5>
+                <h5 class="text-white font-weight-bold text-uppercase"><?= $belum_bekerja['belum_bekerja'] ?> siswa</h5>
             </div>
         </div>
     </div>
 </div>
 
+<div class="row mt-2">
+    <div class="col-md mt-2">
+        <div class="card">
+            <div class="card-body bg-primary text-white">
+                <h6 class="text-uppercase font-weight-bolder text-center text-uppercase">Memorandum of Understanding (MoU)</h6>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row">
+
+    <div class="col-md mt-2">
+        <div class="card bg-danger">
+            <div class="card-body">
+                <h5 class="text-white font-weight-bold text-uppercase">MOU PERUSAHAAN</h4>
+                    <h5 class="text-white font-weight-bold text-uppercase">0 PERUSAHAAN</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-md mt-2">
+        <div class="card bg-info">
+            <div class="card-body">
+                <h5 class="text-white font-weight-bold text-uppercase">MOU KUNIVERSITAS</h4>
+                    <h5 class="text-white font-weight-bold text-uppercase">0 UNIVERSITAS</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
     <div class="col-md mt-2">
         <div class="card">
             <div class="card-header bg-primary">
@@ -111,4 +148,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
